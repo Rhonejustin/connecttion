@@ -24,6 +24,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - run: mkdir mysql-test
+    - run: cd mysql-test
+    - run: npm init -y
     - run: npm i
     - run: npm install mysql
     - run: node index.js
