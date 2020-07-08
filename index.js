@@ -1,11 +1,11 @@
 const mysql = require('mysql');
-const con = mysql.createConnection({
+const connection = mysql.createConnection({
   host: "server282.web-hosting.com",
   user: "rbxctdmc_beta1",
   password: "brolytauzz13"
 });
 
-con.connect(function(err) {
+connection.connect((err) => {
   if (err) throw err;
-  console.log("Connected!");
+  console.log('Connected!');
 });
